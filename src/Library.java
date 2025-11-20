@@ -34,6 +34,10 @@ public class Library {
         books.remove(index);
     }
 
+    public Book getBookByIndex(int index){
+        return books.get(index);
+    }
+
     public List<Book> getBooks() {
         return books;
 

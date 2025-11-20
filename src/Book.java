@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
 
     private String title;
@@ -19,5 +21,16 @@ public class Book {
     @Override
     public String toString() {
         return title + " — " + author;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Book book)) return false;
+        return Objects.equals(title, book.title) && Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, author);
     }
 }
