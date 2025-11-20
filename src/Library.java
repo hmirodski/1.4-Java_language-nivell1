@@ -7,7 +7,7 @@ public class Library {
 
     public void addBook(Book book){
         books.add(book);
-        System.out.println(book + "Added to the Library");
+        System.out.println(book + " Added to the Library");
     }
 
     public void deleteBook(Book book){

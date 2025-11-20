@@ -16,6 +16,8 @@ public class Book {
         return author;
     }
 
-
-
+    @Override
+    public String toString() {
+        return title + " — " + author;
+    }
 }
