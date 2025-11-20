@@ -34,8 +34,18 @@ public class Library {
         books.remove(index);
     }
 
-    public Book getBookByIndex(int index){
+    public Book getBookAt(int index){
         return books.get(index);
+    }
+
+    public void addBookAtIndex(int index, Book book){
+
+        if(books.contains(book)){
+            System.out.println("Book already exists");
+        }else{
+            books.add(index, book);
+        }
+
     }
 
     public List<Book> getBooks() {
