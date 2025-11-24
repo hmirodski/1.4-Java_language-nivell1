@@ -1,6 +1,6 @@
 package exercici2;
 
-public class calculoDni {
+public class CalculoDni {
 
     private static final char[] letters = {
             'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F',
@@ -8,7 +8,7 @@ public class calculoDni {
             'Q', 'V', 'H', 'L', 'C', 'K', 'E'
     };
 
-    public static char calcularLetra(int dninumber){
+    public static char calculateLetter(int dninumber){
         int index = dninumber % 23;
         return letters[index];
     }
