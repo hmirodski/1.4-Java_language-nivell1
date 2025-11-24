@@ -22,4 +22,17 @@ public class LibraryTests {
 
         assertEquals(2, library.getBooks().size());
     }
+
+    @Test
+    public void correctIndex(){
+        Library library = new Library();
+        Book book1 = new Book("Dubliners", "James Joyce");
+        Book book2 = new Book("Ulysses", "James Joyce");
+        library.addBook(book1);
+        library.addBook(book2);
+
+        assertEquals("Dubliners", library.getBooks().get(0).getTitle());
+        assertEquals("Ulysses", library.getBooks().get(1).getTitle());
+    }
+
 }
