@@ -35,4 +35,16 @@ public class LibraryTests {
         assertEquals("Ulysses", library.getBooks().get(1).getTitle());
     }
 
+    @Test
+    public void noDuplicates(){
+        Library library = new Library();
+        Book book1 = new Book("Dubliners", "James Joyce");
+        library.addBook(book1);
+        library.addBook(book1);
+
+        assertEquals(1, library.getBooks().size());
+
+
+    }
+
 }
