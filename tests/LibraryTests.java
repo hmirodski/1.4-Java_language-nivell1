@@ -55,10 +55,27 @@ public class LibraryTests {
         Book book2 = new Book("Ulysses", "James Joyce");
 
         library.addBook(book1);
+        library.addBook(book2);
 
         assertEquals("Dubliners", library.getBooks().get(0).getTitle());
-        assertEquals("Ulysses", library.getBooks().get(0).getTitle());
+        assertEquals("Ulysses", library.getBooks().get(1).getTitle());
     }
 
+    @Test
+    public void modifiedList(){
+        Library library = new Library();
+
+        assertEquals(0, library.getBooks().size());
+
+        Book book1 = new Book("Dubliners", "James Joyce");
+        library.addBook(book1);
+
+        assertEquals(1, library.getBooks().size());
+
+        Book book2 = new Book("Ulysses", "James Joyce");
+        library.addBook(book2);
+        assertEquals(2, library.getBooks().size());
+
+    }
 
 }
