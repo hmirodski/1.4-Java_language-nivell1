@@ -1,3 +1,5 @@
+package exercici1;
+
 import java.util.Objects;
 
 public class Book {

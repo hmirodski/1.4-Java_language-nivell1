@@ -1,3 +1,5 @@
+package exercici1;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -8,10 +10,10 @@ public class Library {
 
     public void addBook(Book book){
         if(books.contains(book)){
-            System.out.println("Book already exists");
+            System.out.println("exercici1.Book already exists");
         }else{
             books.add(book);
-            System.out.println(book + " Added to the Library");
+            System.out.println(book + " Added to the exercici1.Library");
         }
         books.sort(Comparator.comparing(Book::getTitle));
     }
@@ -41,7 +43,7 @@ public class Library {
 
     public void addBookAtIndex(int index, Book book){
         if(books.contains(book)){
-            System.out.println("Book already exists");
+            System.out.println("exercici1.Book already exists");
             return;
         }else{
             books.add(index, book);
