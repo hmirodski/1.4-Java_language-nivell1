@@ -47,4 +47,18 @@ public class LibraryTests {
 
     }
 
+    @Test
+    public void titlesByIndex(){
+
+        Library library = new Library();
+        Book book1 = new Book("Dubliners", "James Joyce");
+        Book book2 = new Book("Ulysses", "James Joyce");
+
+        library.addBook(book1);
+
+        assertEquals("Dubliners", library.getBooks().get(0).getTitle());
+        assertEquals("Ulysses", library.getBooks().get(0).getTitle());
+    }
+
+
 }
