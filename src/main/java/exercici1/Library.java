@@ -1,6 +1,7 @@
 package exercici1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,13 +10,10 @@ public class Library {
     private List<Book> books = new ArrayList<Book>();
 
     public void addBook(Book book){
-        if(books.contains(book)){
-            System.out.println("exercici1.Book already exists");
-        }else{
+        if (!books.contains(book)) {
             books.add(book);
-            System.out.println(book + " Added to the exercici1.Library");
+            sortBooks();
         }
-        books.sort(Comparator.comparing(Book::getTitle));
     }
 
 
@@ -23,7 +21,7 @@ public class Library {
         for(int i = 0 ; i <  books.size(); i++){
             if(books.get(i).getTitle().equalsIgnoreCase(title)){
                 books.remove(i);
-                books.sort(Comparator.comparing(Book::getTitle));
+                sortBooks();
                 return true;
             }
 
@@ -34,7 +32,7 @@ public class Library {
 
     public void removeByIndex(int index){
         books.remove(index);
-        books.sort(Comparator.comparing(Book::getTitle));
+        sortBooks();
     }
 
     public Book getBookAt(int index){
@@ -42,17 +40,18 @@ public class Library {
     }
 
     public void addBookAtIndex(int index, Book book){
-        if(books.contains(book)){
-            System.out.println("exercici1.Book already exists");
+        if (books.contains(book)) {
             return;
-        }else{
-            books.add(index, book);
         }
-        books.sort(Comparator.comparing(Book::getTitle));
+        books.add(index, book);
+        sortBooks();
     }
 
     public List<Book> getBooks() {
-        return books;
+        return Collections.unmodifiableList(books);
+    }
 
+    private void sortBooks() {
+        books.sort(Comparator.comparing(Book::getTitle));
     }
 }

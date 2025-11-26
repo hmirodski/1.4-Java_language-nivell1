@@ -6,6 +6,9 @@ public class Dni {
     private char letter;
 
     public Dni(int number) {
+        if (number < 0 || number > 99999999) {
+            throw new IllegalArgumentException("DNI number must be between 0 and 99999999");
+        }
         this.number = number;
         this.letter = CalculoDni.calculateLetter(number);
     }
