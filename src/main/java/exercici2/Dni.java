@@ -27,7 +27,7 @@ public class Dni {
 
     }
 
-    public boolean validDni(){
+    public boolean validDni() {
         return this.letter == CalculoDni.calculateLetter(this.number);
     }
 

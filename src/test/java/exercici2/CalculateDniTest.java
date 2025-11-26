@@ -1,10 +1,8 @@
 package exercici2;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.api.*;
-import exercici2.CalculoDni;
-
 
 
 public class CalculateDniTest {
@@ -23,7 +21,7 @@ public class CalculateDniTest {
             "44444444, A"
     })
 
-    public void calculateDni(int number, char letterToCome){
+    public void calculateDni(int number, char letterToCome) {
         char calculatedLetter = CalculoDni.calculateLetter(number);
         Assertions.assertEquals(letterToCome, calculatedLetter);
     }

@@ -8,7 +8,7 @@ public class CalculoDni {
             'Q', 'V', 'H', 'L', 'C', 'K', 'E'
     };
 
-    public static char calculateLetter(int dninumber){
+    public static char calculateLetter(int dninumber) {
         int index = dninumber % 23;
         return letters[index];
     }

@@ -1,8 +1,6 @@
 package exercici1;
 
-import exercici1.Book;
-import exercici1.Library;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -28,7 +26,7 @@ public class LibraryTests {
     }
 
     @Test
-    public void correctIndex(){
+    public void correctIndex() {
         Library library = new Library();
         Book book1 = new Book("Dubliners", "James Joyce");
         Book book2 = new Book("Ulysses", "James Joyce");
@@ -40,7 +38,7 @@ public class LibraryTests {
     }
 
     @Test
-    public void noDuplicates(){
+    public void noDuplicates() {
         Library library = new Library();
         Book book1 = new Book("Dubliners", "James Joyce");
         library.addBook(book1);
@@ -52,7 +50,7 @@ public class LibraryTests {
     }
 
     @Test
-    public void titlesByIndex(){
+    public void titlesByIndex() {
 
         Library library = new Library();
         Book book1 = new Book("Dubliners", "James Joyce");
@@ -66,7 +64,7 @@ public class LibraryTests {
     }
 
     @Test
-    public void modifiedList(){
+    public void modifiedList() {
         Library library = new Library();
 
         assertEquals(0, library.getBooks().size());
@@ -83,7 +81,7 @@ public class LibraryTests {
     }
 
     @Test
-    public void decreasedListSize(){
+    public void decreasedListSize() {
         Library library = new Library();
         Book book1 = new Book("Dubliners", "James Joyce");
         Book book2 = new Book("Ulysses", "James Joyce");
@@ -102,7 +100,7 @@ public class LibraryTests {
     }
 
     @Test
-    public void sortedList(){
+    public void sortedList() {
         Library library = new Library();
         Book book1 = new Book("Dubliners", "James Joyce");
         Book book2 = new Book("Ulysses", "James Joyce");
