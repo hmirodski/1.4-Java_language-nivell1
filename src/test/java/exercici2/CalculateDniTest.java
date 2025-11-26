@@ -20,11 +20,9 @@ public class CalculateDniTest {
             "33333333, P",
             "44444444, A"
     })
-
-    public void calculateDni(int number, char letterToCome) {
+    public void calculateDniShouldReturnExpectedLetter(int number, char expectedLetter) {
         char calculatedLetter = CalculoDni.calculateLetter(number);
-        Assertions.assertEquals(letterToCome, calculatedLetter);
+        Assertions.assertEquals(expectedLetter, calculatedLetter);
     }
-
 
 }
