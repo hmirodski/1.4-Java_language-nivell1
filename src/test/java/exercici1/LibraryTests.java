@@ -1,3 +1,5 @@
+package exercici1;
+
 import exercici1.Book;
 import exercici1.Library;
 import org.junit.jupiter.api.*;
