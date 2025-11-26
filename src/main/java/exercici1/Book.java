@@ -8,6 +8,12 @@ public class Book {
     private String author;
 
     public Book(String title, String author) {
+        if (title == null || title.trim().isEmpty()) {
+            throw new IllegalArgumentException("Title cannot be null or empty");
+        }
+        if (author == null || author.trim().isEmpty()) {
+            throw new IllegalArgumentException("Author cannot be null or empty");
+        }
         this.title = title;
         this.author = author;
     }
