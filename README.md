@@ -30,7 +30,7 @@ Crea una clase que lance `ArrayIndexOutOfBoundsException` y verifica su correcto
 
 ## 💻 Tecnologías Utilizadas
 
-- **Java 8** 
+- **Java 17** 
 - **IntelliJ IDEA** - Entorno de desarrollo integrado
 - **Git** - Control de versiones
 - **JUnit 5 (Jupiter)** - Framework de testing
