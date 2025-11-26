@@ -9,7 +9,7 @@ public class Library {
 
     private List<Book> books = new ArrayList<Book>();
 
-    public void addBook(Book book){
+    public void addBook(Book book) {
         if (!books.contains(book)) {
             books.add(book);
             sortBooks();
@@ -17,9 +17,9 @@ public class Library {
     }
 
 
-    public boolean deleteBookByTitle(String title){
-        for(int i = 0 ; i <  books.size(); i++){
-            if(books.get(i).getTitle().equalsIgnoreCase(title)){
+    public boolean deleteBookByTitle(String title) {
+        for (int i = 0; i < books.size(); i++) {
+            if (books.get(i).getTitle().equalsIgnoreCase(title)) {
                 books.remove(i);
                 sortBooks();
                 return true;
@@ -30,16 +30,16 @@ public class Library {
         return false;
     }
 
-    public void removeByIndex(int index){
+    public void removeByIndex(int index) {
         books.remove(index);
         sortBooks();
     }
 
-    public Book getBookAt(int index){
+    public Book getBookAt(int index) {
         return books.get(index);
     }
 
-    public void addBookAtIndex(int index, Book book){
+    public void addBookAtIndex(int index, Book book) {
         if (books.contains(book)) {
             return;
         }
